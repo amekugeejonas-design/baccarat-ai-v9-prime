@@ -5,6 +5,7 @@ Prédicteur d'**enseigne** (♠ ♥ ♦ ♣) de la 1ère carte du **Joueur** ET 
 ## 🌐 URLs
 - **Démo sandbox** : https://3000-i8o7e3psr73tpeoinyd4f-2e77fc33.sandbox.novita.ai
 - **Production Cloudflare Pages** : (voir section Déploiement)
+- **GitHub** : https://github.com/amekugeejonas-design/baccarat-ai-v9-prime
 - **API état live** : `/api/state` · **Métriques réelles** : `/api/metrics` · **Health** : `/api/health`
 
 ## ✅ Méthodologie (leçons de V7/V8 corrigées)
