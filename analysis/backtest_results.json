@@ -1,0 +1,94 @@
+{
+  "learned_weights": {
+    "freq": 0.2,
+    "momentum": 0.2,
+    "markov": 1.0,
+    "coverage": 2.0,
+    "color": 2.0
+  },
+  "validation_out_of_sample": {
+    "player": {
+      "n": 609,
+      "success_rate_global": 0.6158,
+      "exact_first_card": 0.2627,
+      "suit_in_hand": 0.5238,
+      "color_in_hand": 0.7915,
+      "normal_mode": {
+        "n": 376,
+        "suit_in_hand": 0.5239
+      },
+      "rattrapage_mode": {
+        "n": 233,
+        "success_color": 0.7639,
+        "suit_in_hand": 0.5236
+      },
+      "max_loss_streak": 4,
+      "pct_streaks_le3": 0.9944
+    },
+    "banker": {
+      "n": 609,
+      "success_rate_global": 0.6535,
+      "exact_first_card": 0.2759,
+      "suit_in_hand": 0.5452,
+      "color_in_hand": 0.8391,
+      "normal_mode": {
+        "n": 399,
+        "suit_in_hand": 0.5639
+      },
+      "rattrapage_mode": {
+        "n": 210,
+        "success_color": 0.8238,
+        "suit_in_hand": 0.5095
+      },
+      "max_loss_streak": 4,
+      "pct_streaks_le3": 0.9885
+    }
+  },
+  "full_backtest": {
+    "player": {
+      "n": 1157,
+      "success_rate_global": 0.6301,
+      "exact_first_card": 0.2576,
+      "suit_in_hand": 0.5246,
+      "color_in_hand": 0.8021,
+      "normal_mode": {
+        "n": 730,
+        "suit_in_hand": 0.5356
+      },
+      "rattrapage_mode": {
+        "n": 427,
+        "success_color": 0.7916,
+        "suit_in_hand": 0.5059
+      },
+      "max_loss_streak": 4,
+      "pct_streaks_le3": 0.9971
+    },
+    "banker": {
+      "n": 1157,
+      "success_rate_global": 0.6404,
+      "exact_first_card": 0.2783,
+      "suit_in_hand": 0.5307,
+      "color_in_hand": 0.8237,
+      "normal_mode": {
+        "n": 742,
+        "suit_in_hand": 0.5391
+      },
+      "rattrapage_mode": {
+        "n": 415,
+        "success_color": 0.8217,
+        "suit_in_hand": 0.5157
+      },
+      "max_loss_streak": 6,
+      "pct_streaks_le3": 0.9854
+    }
+  },
+  "monte_carlo_random_shoes": {
+    "runs": [
+      0.609,
+      0.6117,
+      0.6186
+    ],
+    "mean_success": 0.6131,
+    "note": "borne du moteur sur sabots purement aleatoires (10200 mains)"
+  }
+}

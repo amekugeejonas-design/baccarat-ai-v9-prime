@@ -1,0 +1,40 @@
+{
+  "cov_window": 60,
+  "ratt_window": 40,
+  "player": {
+    "n": 1157,
+    "success_rate_global": 0.6301,
+    "exact_first_card": 0.2576,
+    "suit_in_hand": 0.5246,
+    "color_in_hand": 0.8021,
+    "normal_mode": {
+      "n": 730,
+      "suit_in_hand": 0.5356
+    },
+    "rattrapage_mode": {
+      "n": 427,
+      "success_color": 0.7916,
+      "suit_in_hand": 0.5059
+    },
+    "max_loss_streak": 4,
+    "pct_streaks_le3": 0.9971
+  },
+  "banker": {
+    "n": 1157,
+    "success_rate_global": 0.6404,
+    "exact_first_card": 0.2783,
+    "suit_in_hand": 0.5307,
+    "color_in_hand": 0.8237,
+    "normal_mode": {
+      "n": 742,
+      "suit_in_hand": 0.5391
+    },
+    "rattrapage_mode": {
+      "n": 415,
+      "success_color": 0.8217,
+      "suit_in_hand": 0.5157
+    },
+    "max_loss_streak": 6,
+    "pct_streaks_le3": 0.9854
+  }
+}

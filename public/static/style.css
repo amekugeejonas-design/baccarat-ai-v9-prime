@@ -1,1 +1,92 @@
-h1 { font-family: Arial, Helvetica, sans-serif; }
+/* Baccarat AI V9 Prime — HUD futuriste */
+body {
+  background:
+    radial-gradient(ellipse at 20% -10%, rgba(0, 220, 255, 0.08), transparent 50%),
+    radial-gradient(ellipse at 80% 110%, rgba(255, 170, 0, 0.07), transparent 50%),
+    #06080f;
+}
+
+.scanlines {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.hud-panel {
+  background: linear-gradient(160deg, rgba(13, 20, 35, 0.92), rgba(8, 12, 22, 0.95));
+  border: 1px solid rgba(90, 130, 180, 0.18);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+}
+
+.pred-card { position: relative; overflow: hidden; }
+.pred-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 40%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+  animation: sweep 4s infinite;
+}
+@keyframes sweep { to { left: 120%; } }
+
+.neon-cyan { color: #4be8ff; text-shadow: 0 0 12px rgba(75, 232, 255, 0.55); }
+.neon-amber { color: #ffc44d; text-shadow: 0 0 12px rgba(255, 196, 77, 0.55); }
+
+.suit-box {
+  width: 108px; height: 108px;
+  background: radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.6));
+  border: 2px solid rgba(120, 150, 200, 0.25);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
+  flex-shrink: 0;
+}
+.suit-glyph {
+  font-size: 64px;
+  line-height: 1;
+  filter: drop-shadow(0 0 14px currentColor);
+  transition: all 0.4s;
+}
+.suit-red { color: #ff4d6d; }
+.suit-black { color: #cfd8ea; }
+
+.ratt-blink { animation: blink 1.1s infinite; }
+@keyframes blink { 50% { opacity: 0.35; } }
+
+.strong-pulse { animation: strongp 1.4s infinite; box-shadow: 0 0 18px rgba(255, 196, 0, 0.6); }
+@keyframes strongp {
+  50% { box-shadow: 0 0 34px rgba(255, 196, 0, 0.95); transform: scale(1.03); }
+}
+
+.conf-high { background: linear-gradient(90deg, #059669, #34d399); box-shadow: 0 0 10px rgba(52, 211, 153, 0.7); }
+.conf-mid { background: linear-gradient(90deg, #d97706, #fbbf24); box-shadow: 0 0 10px rgba(251, 191, 36, 0.7); }
+.conf-low { background: linear-gradient(90deg, #dc2626, #f87171); box-shadow: 0 0 10px rgba(248, 113, 113, 0.7); }
+
+.prob-cell {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(90, 130, 180, 0.15);
+  border-radius: 8px;
+  padding: 4px 2px;
+}
+.prob-cell.best { border-color: rgba(75, 232, 255, 0.6); background: rgba(75, 232, 255, 0.08); }
+
+.hist-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(90, 130, 180, 0.1);
+}
+.hist-row:hover { border-color: rgba(75, 232, 255, 0.35); }
+
+#history-list::-webkit-scrollbar { width: 5px; }
+#history-list::-webkit-scrollbar-thumb { background: rgba(75, 232, 255, 0.3); border-radius: 3px; }
